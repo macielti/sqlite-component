@@ -1,14 +1,12 @@
-# sqlite-component
+[![Clojars Project](https://img.shields.io/clojars/v/net.clojars.macielti/sqlite-component.svg)](https://clojars.org/net.clojars.macielti/sqlite-component)
 
-A Clojure library designed to ... well, that part is up to you.
+# SQLite Component
 
-## Usage
-
-FIXME
+SQLite Component is a component that provides a simple way to interact with SQLite databases.
 
 ## License
 
-Copyright © 2024 FIXME
+Copyright © 2024 Bruno do Nascimento Maciel
 
 This program and the accompanying materials are made available under the
 terms of the Eclipse Public License 2.0 which is available at
