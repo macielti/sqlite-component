@@ -1,18 +1,11 @@
 (ns sqlite-component.core
   (:require [clojure.tools.logging :as log]
-            [integrant.core :as ig]
-            [next.jdbc :as jdbc]))
+            [integrant.core :as ig]))
 
 (defmethod ig/init-key ::sqlite
-  [_ {:keys [components schemas]}]
+  [_ {:keys [components]}]
   (log/info :starting ::sqlite)
-  (let [sqlite (-> components :config :sqlite)]
-    (with-open [conn (jdbc/get-connection sqlite)]
-      (doseq [schema schemas]
-        (try (jdbc/execute! conn [schema])
-             (catch Exception e
-               (log/error (ex-message e))))))
-    sqlite))
+  (-> components :config :sqlite))
 
 (defmethod ig/halt-key! ::sqlite
   [_ _]
