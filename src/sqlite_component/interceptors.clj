@@ -1,8 +1,7 @@
 (ns sqlite-component.interceptors
-  (:require
-   [io.pedestal.interceptor :as pedestal.interceptor]
-   [next.jdbc :as jdbc]
-   [schema.core :as s]))
+  (:require [io.pedestal.interceptor :as pedestal.interceptor]
+            [next.jdbc :as jdbc]
+            [schema.core :as s]))
 
 (s/defn http-friendly-exception
   "https://www.baeldung.com/rest-api-error-handling-best-practices"

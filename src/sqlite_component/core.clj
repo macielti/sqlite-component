@@ -1,8 +1,7 @@
 (ns sqlite-component.core
-  (:require
-   [clojure.tools.logging :as log]
-   [integrant.core :as ig]
-   [next.jdbc :as jdbc]))
+  (:require [clojure.tools.logging :as log]
+            [integrant.core :as ig]
+            [next.jdbc :as jdbc]))
 
 (defmethod ig/init-key ::sqlite
   [_ {:keys [components]}]
