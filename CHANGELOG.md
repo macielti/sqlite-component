@@ -5,6 +5,12 @@ of [keepachangelog.com](http://keepachangelog.com/).
 
 ## [Unreleased]
 
+## 2.1.1 - 2024-11-25
+
+### Fixed
+
+- Fixed interceptors to use database conn instead of database specs.
+
 ## 2.1.0 - 2024-11-25
 
 ### Changed

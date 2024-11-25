@@ -23,10 +23,9 @@
   (pedestal.interceptor/interceptor
    {:name  ::resource-existence-check-interceptor
     :enter (fn [{{:keys [components]} :request :as context}]
-             (let [database (:sqlite components)
+             (let [database-conn (:sqlite components)
                    resource-identifier (resource-identifier-fn context)
-                   resource (with-open [conn (jdbc/get-connection database)]
-                              (some-> (jdbc/execute! conn [sql-query resource-identifier]) first))]
+                   resource (some-> (jdbc/execute! database-conn [sql-query resource-identifier]) first)]
                (when-not resource
                  (http-friendly-exception 404
                                           "resource-not-found"
