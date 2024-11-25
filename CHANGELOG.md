@@ -5,6 +5,12 @@ of [keepachangelog.com](http://keepachangelog.com/).
 
 ## [Unreleased]
 
+## 2.1.0 - 2024-11-25
+
+### Changed
+
+- Now component returns a connection instead of a database specs.
+
 ## 1.1.0 - 2024-11-24
 
 ### Removed

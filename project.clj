@@ -1,4 +1,4 @@
-(defproject net.clojars.macielti/sqlite-component "1.1.0"
+(defproject net.clojars.macielti/sqlite-component "2.1.0"
 
   :description "SQLite component for Integrant"
 
